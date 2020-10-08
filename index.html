@@ -1,0 +1,35 @@
+<html>
+<style>
+.chart { margin: auto; width: 50%; }
+.center { margin: auto; text-align: center; }
+</style>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript">
+         google.charts.load('current', {'packages':['corechart', 'bar']});
+         google.charts.setOnLoadCallback( function() {
+                // TODO: read data from com.loockwood.benchmark.test-benchmarkData.json file
+                // TODO: add ci support
+                drawChart("simple_chart", "SimpleViewBenchmark", 0.168385, 0.204531, 0.027448, 0.067552, 0.028697, 0.111563)
+                drawChart("profile_chart", "ProfileViewBenchmark", 0.496718, 0.527656, 0.07375, 0.141563, 0.070521, 0.48)
+                drawChart("complex_chart", "ComplexViewBenchmark", 2.378958, 2.407344, 0.823281, 0.821563, 1.270781, 1.290937)
+
+                appendText("device", "Redmi Note 7 (29)")
+                appendText("constraint", "2.0.2")
+            }
+         );
+    </script>
+</head>
+<body>
+
+<h2 class="center">Measurement environment</h2>
+<h3 class="center">Average Measurement (ms)</h3><br>
+<p id="device" class="center"><b>Device: </b></p>
+<p id="constraint" class="center"><b>ConstraintLayout: </b></p><br>
+<div id="simple_chart" class="chart"></div>
+<div id="profile_chart" class="chart"></div>
+<div id="complex_chart" class="chart"></div>
+
+</body>
+</html>

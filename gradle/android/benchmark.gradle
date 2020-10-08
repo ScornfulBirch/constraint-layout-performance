@@ -1,0 +1,23 @@
+apply from: rootProject.file('gradle/android/library.gradle')
+apply from: rootProject.file('gradle/android/target.gradle')
+apply plugin: 'androidx.benchmark'
+
+android {
+
+    defaultConfig {
+
+        testInstrumentationRunner 'androidx.benchmark.junit4.AndroidBenchmarkRunner'
+        testInstrumentationRunnerArgument 'androidx.benchmark.output.enable', 'true'
+    }
+
+    testBuildType = "release"
+
+    buildTypes {
+        release {
+            isDefault = true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'benchmark-proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}

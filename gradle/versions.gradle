@@ -1,0 +1,8 @@
+ext.versions = [
+        appId     : 'com.lockwood.benchmark',
+        minSdk    : 18,
+        compileSdk: 30,
+        targetSdk : 30,
+        code      : 1,
+        name      : '1.0.0'
+]
