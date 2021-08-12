@@ -1,2 +1,2 @@
-include ':benchmark', ':core'
-rootProject.name = "ConstraintLayoutPerformance"
+include ":benchmark", ":core"
+rootProject.name = "performance-test"

@@ -8,6 +8,6 @@ import org.junit.runner.RunWith
 class ComplexViewBenchmark : LayoutCompareBenchmark() {
 
     override val traditionalRes: Int = R.layout.complex_traditional
-    override val constraintRes: Int = R.layout.complex_traditional
+    override val constraintRes: Int = R.layout.complex_constraint
 
 }

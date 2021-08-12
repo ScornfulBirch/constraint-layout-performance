@@ -1,2 +1,2 @@
-apply from: rootProject.file('gradle/android/library.gradle')
-apply from: rootProject.file('gradle/android/deps.gradle')
+apply from: rootProject.file("gradle/android/library.gradle")
+apply from: rootProject.file("gradle/android/deps.gradle")
